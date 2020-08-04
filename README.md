@@ -29,12 +29,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+reacts is a library thet allows us to render and use component styles.
 
 1. Describe component state.
+data passed by the uuser. we need a way to offload a lot of the state (data) that our apps need to use, from the DOM
 
 1. Describe props.
+Propsis a special keyword in React, which stands for properties and is being used for passing data from one component to another.
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+A side effect is anything that affects something outside the scope of the function being executed. Fetching data from an API, timers, logging, and manually manipulating the DOM are all examples of side effects.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
