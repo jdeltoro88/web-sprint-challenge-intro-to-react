@@ -12,31 +12,34 @@ import Character from "./components/Character";
 
 const App = () => {
   
-  const [character, setCharacter] = useState();
-  const characters = [0,1,2,3,4,5,6,7,8,9];
+  const [character, setCharacter] = useState([]);
+  
 
   useEffect(() => {
-    characters.map(index => {
-      axios.get(`https://swapi.dev/api/people/${index}`)
-      .then(response => { console.log(response)
-        setCharacter(response.data);
+   
+      axios.get(`https://swapi.dev/api/people/`)
+      .then(response => { 
+        setCharacter(response.data.results);
         
       })
-      .catch(error => console.log(error));
-    })
+      .catch(error => console.log('Error!', error));
+    
     
   } , []);
+
   
-  console.log(character);
-  console.log(characters);
+  
+  
   
   if(!character) return <h1>Loading</h1>
   return (
     <div className="App">
       <h1 className="Header" style={{fontSize: '4rem'}} >STAR WARS REACT</h1>
       
-       {characters.map(() => {
-        return <Character character={character}/>
+       {character.map((char ) => {
+
+        return <Character character={char}/>
+
        })}
       
     </div>
